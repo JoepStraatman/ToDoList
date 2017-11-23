@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         updateData();
         et.setText("");
     }
-
     private void updateData() {
         adapt.swapCursor(db.selectAll());
     }
