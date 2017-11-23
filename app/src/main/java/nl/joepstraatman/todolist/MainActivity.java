@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         updateData();
         et.setText("");
     }
-
     private void updateData() {
         adapt.swapCursor(db.selectAll());
     }
@@ -49,9 +48,6 @@ public class MainActivity extends AppCompatActivity {
                                 View view,
                                 int position,
                                 long id) {
-            //String picked = ("" +(parent.getItemAtPosition(position)));
-            //Toast toast = Toast.makeText(getApplicationContext(), picked, Toast.LENGTH_SHORT);
-            //toast.show();
             db.update(id);
             updateData();
         }
