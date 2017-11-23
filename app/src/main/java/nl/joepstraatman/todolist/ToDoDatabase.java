@@ -42,7 +42,7 @@ public class ToDoDatabase extends SQLiteOpenHelper {
         return getWritableDatabase().rawQuery("SELECT * FROM todos", null);
     }
     public void insert(String title, int completed){
-        SQLiteDatabase db = getWritableDatabase();//("INSERT INTO todos (title,completed) Values ('"+title+"',"+completed, null);
+        SQLiteDatabase db = getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("title",title);
         contentValues.put("completed",completed);
